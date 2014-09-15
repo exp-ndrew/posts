@@ -5,6 +5,7 @@ class UsersController < ApplicationController
       @user = User.new
       render "new"
     end
+    @post = Post.new
   end
 
   def new
