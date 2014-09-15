@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
 
   def index
-    logged_in?
-    redirect_to new_user_path
+    if !current_user
+      @user = User.new
+      render "new"
+    end
   end
 
   def new
@@ -12,12 +14,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      sessions[:user_id] = @user.id
-      redirect_to root
+      session[:user_id] = @user.id
+      redirect_to root_path
     else
       render "new"
     end
   end
+
 
 private
   def user_params
