@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def index
     if !current_user
       @user = User.new
+      @color = @user.random_color
       render "new"
     else
       @posts = current_user.posts
@@ -27,7 +28,7 @@ class UsersController < ApplicationController
 
 private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :color)
   end
 
 
