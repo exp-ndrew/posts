@@ -1,6 +1,8 @@
-<div class="form-group">
-  <%= form_for(@user) do |f| %>
+ <div class="col-md-4 bg-info img-rounded">
+ <div class="form-group">
+  <%= form_for @user do |f| %>
     <form role="form">
+
       <%= f.label :email %>
       <%= f.text_field :email, :class => "form-control" %>
       <%= f.label :password %>
@@ -11,3 +13,4 @@
       <%= f.submit :class => "btn btn-default" %>
     </form>
 <% end %>
+</div>
