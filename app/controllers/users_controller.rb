@@ -4,6 +4,8 @@ class UsersController < ApplicationController
     if !current_user
       @user = User.new
       render "new"
+    else
+      @posts = current_user.posts
     end
     @post = Post.new
   end
