@@ -9,4 +9,10 @@
       </ul>
     </li>
   </ul>
+<% else %>
+  <ul class="nav navbar-nav navbar-right">
+    <li>
+      <%= link_to "Log In", login_path %>
+    </li>
+  </ul>
 <% end %>
