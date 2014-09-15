@@ -1,0 +1,15 @@
+<%= render 'new_post_modal' %>
+
+<div class="col-md-3 hidden-xs">
+   <%= render "user_info" %>
+</div>
+
+<div class="col-md-7">
+  <% @posts.each do |post| %>
+    <%= render "post", :@post => post %>
+  <% end %>
+</div>
+
+<div class="col-md-2 hidden-xs hidden-sm">
+
+</div>

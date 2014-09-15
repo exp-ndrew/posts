@@ -1,14 +1,12 @@
 class UsersController < ApplicationController
 
   def index
+    @post = Post.new
     if !current_user
       @user = User.new
       @color = @user.random_color
       render "new"
-    else
-      @posts = current_user.posts
     end
-    @post = Post.new
   end
 
   def new
@@ -25,6 +23,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+    @post = Post.new
+    @posts = @user.posts
+  end
 
 private
   def user_params

@@ -1,13 +1,12 @@
-<%= render 'new_post' %>
+<% if current_user %>
+  <%= render 'new_post_modal' %>
+<% end %>
 
 <div class="col-md-3 hidden-xs">
-   <%= render "user_info" %>
 </div>
 
 <div class="col-md-7">
-  <% @posts.each do |post| %>
-    <%= render "post", :@post => post %>
-  <% end %>
+  <h2>This is where posts from your followers will show.</h2>
 </div>
 
 <div class="col-md-2 hidden-xs hidden-sm">
