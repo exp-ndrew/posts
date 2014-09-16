@@ -1,6 +1,7 @@
 <div class="bg-primary" style="padding:20px;
                               border-radius:10px;
-                              margin:10px">
+                              margin:10px"
+                              id="div-<%=@post.id %>">
   <h4 id="post-<%= @post.id %>"><%= @post.format.html_safe %></h4>
   <div style="padding:5px;
               float:right;
@@ -16,7 +17,7 @@
   </div>
 
   <div>
-    <%= @user.email %> <a href="#" data-toggle="modal" data-target=".edit-post-<%=@post.id%>">Edit</a> | <%= link_to "Delete", user_post_path(current_user, @post), :method => :delete %>
+    <%= @user.email %> <a href="#" data-toggle="modal" data-target=".edit-post-<%=@post.id%>">Edit</a> | <%= link_to "Delete", user_post_path(current_user, @post), :remote => true, :method => :delete %>
   </div>
   </div>
 </div>
