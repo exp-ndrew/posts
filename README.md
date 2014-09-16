@@ -28,6 +28,7 @@ Twitter clone for quick note-taking or posting.
 
 * login/signup forms look funky
 * nav bar in xs/sm responsive layouts: should show user information and links without hamburger button
+* view profile pages without being logged in
 
 ## Setup
 
