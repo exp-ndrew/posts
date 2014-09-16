@@ -1,7 +1,7 @@
 <% @post_author = User.find(@post.user_id) %>
 <div class="post-box" id="div-<%=@post.id %>">
   <h4 id="post-<%= @post.id %>"><%= @post.format.html_safe %></h4>
-  <div class="post-user-info-box">
+  <a href="/users/<%=@post_author.id%>" class="remove-link-style"><div class="post-user-info-box">
 
     <div class="post-user-color-box" style="background-color:<%= @post_author.color%>">
     </div>
@@ -16,7 +16,7 @@
       <% end  %>
   </div>
 
-  </div>
+  </div></a>
 </div>
 <script>
 
