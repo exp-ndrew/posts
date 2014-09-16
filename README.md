@@ -6,7 +6,6 @@ Twitter clone for quick note-taking or posting.
 
 ## Currently working on
 
-* making multiple users play nice
 
 ## Future
 
@@ -15,7 +14,7 @@ Twitter clone for quick note-taking or posting.
 * Followers/Following
 * Preferences section
   * add ability to change user color
-  * delete your own account
+  * delete your own account (D on User)
   * change email and password (R/U on User)
 
 ### Far
@@ -26,9 +25,11 @@ Twitter clone for quick note-taking or posting.
 
 ## To Fix
 
+* new post on index doesn't work
+* users can delete others posts on their own pages
 * login/signup forms look funky
 * nav bar in xs/sm responsive layouts: should show user information and links without hamburger button
-* view profile pages without being logged in
+
 
 ## Setup
 

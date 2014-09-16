@@ -14,15 +14,6 @@ class User < ActiveRecord::Base
     self.email[0..5] + ".."
   end
 
-   def email_format_long
-
-    if self.email.length > 15
-      self.email[0..17] + ".."
-    else
-      self.email[0..17]
-    end
-  end
-
   def email_name
     if self["@"]
       self.email.slice(0..(self.email.index('@') - 1))

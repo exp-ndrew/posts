@@ -1,0 +1,7 @@
+<div class="post-box-container">
+    <% Post.all.each do |post| %>
+           <%= render "post", :@post => post %>
+  <% end %>
+
+  </div>
+

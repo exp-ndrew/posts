@@ -11,7 +11,7 @@
       <% if current_user %>
         <%= render 'edit_post_modal', :@post => post  %>
       <% end %>
-        <% if (post.user_id == @user.id) || (post.body.include? "@#{@user.email_name}") %>
+        <% if (post.user_id == @user.id) || (post.body.include? "@#{@user.handle}") %>
            <%= render "post", :@post => post %>
         <% end %>
   <% end %>
