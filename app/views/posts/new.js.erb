@@ -1,0 +1,3 @@
+$('#post-<%= @post.id %>').html("<%= @post.body %>")
+console.log("New post added!")
+$('.new-post-<%=@post.id%>').modal('hide');

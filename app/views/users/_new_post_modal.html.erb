@@ -6,7 +6,7 @@
         <h4 class="modal-title">New Post</h4>
       </div>
       <div class="modal-body">
-        <%= form_for [current_user, @post] do |f| %>
+        <%= form_for [current_user, @post], remote: true do |f| %>
           <%= f.text_area :body, :autofocus => true, :class => "form-control" %>
           <%= f.hidden_field :user_id, :value => current_user.id %>
       <div class="modal-footer">
