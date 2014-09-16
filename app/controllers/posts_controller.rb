@@ -11,7 +11,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @user = current_user
     @post.update(post_params)
-    redirect_to user_path(@user)
+    respond_to do |format|
+      format.html { redirect_to user_path(@user) }
+      format.js
+    end
   end
 
   def destroy

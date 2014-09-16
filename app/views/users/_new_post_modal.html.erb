@@ -18,3 +18,22 @@
     </div>
   </div>
 </div>
+<!--
+<script>
+$(function(){
+    $('textarea').keypress(function(e) {
+        if (e.keyCode == 13 && !e.shiftKey) {
+            e.preventDefault();
+            var frm = this.form; // don't submit the form yet
+            $.ajax({
+                url: $(frm).attr('action'), // remember to specify which attribute you want
+                data: $(frm).serialize(),
+                dataType: "json",
+                success: function() { frm.submit(); } // submit the form when the ajax request is complete
+            });
+        }
+    });
+
+});
+</script>
+ -->

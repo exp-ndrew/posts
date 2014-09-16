@@ -6,13 +6,12 @@ Twitter clone for quick note-taking or posting.
 
 ## Currently working on
 
-* CRUD on Posts
+* AJAX on CRUD for posts
 
 ## Future
 
 ### Near
 
-* CRUD on Posts
 * Followers/Following
 * Preferences section
   * add ability to change user color

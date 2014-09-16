@@ -1,0 +1,8 @@
+$('#post-<%= @post.id %>').html("<%= @post.body %>")
+console.log("Post <%= @post.id %> updated!")
+$('.edit-post-<%=@post.id%>').modal('hide');
+
+
+
+
+
