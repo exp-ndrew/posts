@@ -1,7 +1,6 @@
 $('.new-post').modal('hide');
-$('#posts').load("/users/<%= current_user.id %> .post-box-container" );
-$('#number-of-posts').load("/users/<%= current_user.id %> #number-of-posts" );
-
+  $('#posts-<%= @user.id %>').load("/users/<%= current_user.id %> .post-box-container" );
+  $('#number-of-posts').load("/users/<%= current_user.id %> #number-of-posts" );
 $('.new-post-text-area').val('');
 console.log("New post added!")
 

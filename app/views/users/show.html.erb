@@ -3,7 +3,7 @@
 <div class="col-md-3 hidden-xs">
    <%= render "user_info" %>
 </div>
-<div id="posts">
+<div id="posts-<%= @user.id %>">
   <div class="col-md-7 post-box-container">
     <% @posts.each do |post| %>
       <%= render 'edit_post_modal', :@post => post  %>

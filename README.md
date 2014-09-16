@@ -6,13 +6,12 @@ Twitter clone for quick note-taking or posting.
 
 ## Currently working on
 
-* AJAX on C for posts
+* making multiple users play nice
 
 ## Future
 
 ### Near
 
-* Scope for rendering newest posts at the top
 * Followers/Following
 * Preferences section
   * add ability to change user color
@@ -21,7 +20,7 @@ Twitter clone for quick note-taking or posting.
 
 ### Far
 
-* @user support (calling a user with @ in front of their user name)
+* "*@user*" support (calling a user with @ in front of their user name)
 * Hashtag support (hashtag objects with many-to-many relation to posts, check uniqueness on creation, etc)
 * Feed with posts from all users on homepage
 
