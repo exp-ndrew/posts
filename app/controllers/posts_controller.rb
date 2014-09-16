@@ -14,6 +14,13 @@ class PostsController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  def destroy
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to user_path(@user)
+  end
+
 private
 
 def post_params

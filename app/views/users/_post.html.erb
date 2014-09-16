@@ -16,7 +16,7 @@
   </div>
 
   <div>
-    <%= @user.email %> <a href="#" data-toggle="modal" data-target=".edit-post-<%=@post.id%>">Edit</a>
+    <%= @user.email %> <a href="#" data-toggle="modal" data-target=".edit-post-<%=@post.id%>">Edit</a> | <%= link_to "Delete", user_post_path(current_user, @post), :method => :delete %>
   </div>
   </div>
 </div>
