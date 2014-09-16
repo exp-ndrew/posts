@@ -1,4 +1,5 @@
 $('#div-<%=@post.id %>').remove()
+$('#number-of-posts').load("/users/<%= current_user.id %> #number-of-posts" );
 console.log("Post <%= @post.id %> removed!")
 
 

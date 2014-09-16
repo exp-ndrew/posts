@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body">
         <%= form_for [current_user, @post], remote: true do |f| %>
-          <%= f.text_area :body, :autofocus => true, :class => "form-control" %>
+          <%= f.text_area :body, :autofocus => true, :class => "form-control new-post-text-area" %>
           <%= f.hidden_field :user_id, :value => current_user.id %>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -18,22 +18,4 @@
     </div>
   </div>
 </div>
-<!--
-<script>
-$(function(){
-    $('textarea').keypress(function(e) {
-        if (e.keyCode == 13 && !e.shiftKey) {
-            e.preventDefault();
-            var frm = this.form; // don't submit the form yet
-            $.ajax({
-                url: $(frm).attr('action'), // remember to specify which attribute you want
-                data: $(frm).serialize(),
-                dataType: "json",
-                success: function() { frm.submit(); } // submit the form when the ajax request is complete
-            });
-        }
-    });
 
-});
-</script>
- -->
