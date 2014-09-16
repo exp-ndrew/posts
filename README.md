@@ -1,8 +1,34 @@
-# twoddler
+# posts
 
 ## About
 
-A clone of Twitter, inspired by Fisher-Price.
+Twitter clone for quick note-taking or posting.
+
+## Currently working on
+
+* CRUD on Posts
+
+## Future
+
+### Near
+
+* CRUD on Posts
+* Followers/Following
+* Preferences section
+  * add ability to change user color
+  * delete your own account
+  * change email and password (R/U on User)
+
+### Far
+
+* @user support (calling a user with @ in front of their user name)
+* Hashtag support (hashtag objects with many-to-many relation to posts, check uniqueness on creation, etc)
+* Feed with posts from all users on homepage
+
+## To Fix
+
+* login/signup forms look funky
+* nav bar in xs/sm responsive layouts: should show user information and links without hamburger button
 
 ## Setup
 
@@ -14,7 +40,6 @@ A clone of Twitter, inspired by Fisher-Price.
 ## Meta
 
 15 September 2014
-
 
 [Matthew Williams](http://github.com/mattwilliams85) and [Andrew M Westling](http://github.com/expandrew)
 via [Epicodus](http://www.learnhowtoprogram.com/lessons/twitter-clone)
