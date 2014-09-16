@@ -1,0 +1,4 @@
+$('.new-post').modal('hide');
+$('#posts').load("/users/<%= current_user.id %> .post-box-container" );
+console.log("New post added!")
+

@@ -3,12 +3,14 @@
 <div class="col-md-3 hidden-xs">
    <%= render "user_info" %>
 </div>
-
-<div class="col-md-7">
-  <% @posts.each do |post| %>
-    <%= render 'edit_post_modal', :@post => post  %>
-    <%= render "post", :@post => post %>
+<div id="posts">
+  <div class="col-md-7 post-box-container">
+    <% @posts.each do |post| %>
+      <%= render 'edit_post_modal', :@post => post  %>
+      <%= render "post", :@post => post %>
   <% end %>
+
+  </div>
 </div>
 
 <div class="col-md-2 hidden-xs hidden-sm">

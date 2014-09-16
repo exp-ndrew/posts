@@ -3,7 +3,10 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to user_path(current_user)
+      respond_to do |format|
+        format.html { redirect_to user_path(@user) }
+        format.js
+      end
     end
   end
 
