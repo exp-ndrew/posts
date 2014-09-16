@@ -7,6 +7,13 @@ class PostsController < ApplicationController
     end
   end
 
+  def update
+    @post = Post.find(params[:id])
+    @user = current_user
+    @post.update(post_params)
+    redirect_to user_path(@user)
+  end
+
 private
 
 def post_params
