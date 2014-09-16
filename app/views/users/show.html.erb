@@ -1,13 +1,19 @@
-<%= render 'new_post_modal' %>
-
 <div class="col-md-3 hidden-xs">
    <%= render "user_info" %>
+   <% if current_user %>
+     <%= render 'new_post_modal' %>
+   <% end %>
 </div>
 <div id="posts-<%= @user.id %>">
   <div class="col-md-7 post-box-container">
     <% @posts.each do |post| %>
-      <%= render 'edit_post_modal', :@post => post  %>
-      <%= render "post", :@post => post %>
+
+      <% if current_user %>
+        <%= render 'edit_post_modal', :@post => post  %>
+      <% end %>
+        <% if (post.user_id == @user.id) || (post.body.include? "@#{@user.email_name}") %>
+           <%= render "post", :@post => post %>
+        <% end %>
   <% end %>
 
   </div>
